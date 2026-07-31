@@ -42,7 +42,7 @@
 <p><img src="https://skillicons.dev/icons?i=git,github,docker,linux,bash,aws,azure" /></p>
 
 **Tools**
-<p><img src="https://skillicons.dev/icons?i=vscode,postman,figma,npm,pnpm,vim" /></p>
+<p><img src="https://skillicons.dev/icons?i=vscode,postman,npm,pnpm,vim" /></p>
 
 <br>
 
