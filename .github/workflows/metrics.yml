@@ -16,8 +16,7 @@ jobs:
 
     steps:
       - name: Generate GitHub Metrics
-        # Pin PR #1834: migrate achievements to projectsV2; Projects classic is sunset.
-        uses: ShawnXxy/metrics@1e49d0b8b932624dd7762147e35ccc137eda09f1
+        uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: github-metrics.svg
@@ -31,5 +30,6 @@ jobs:
           plugin_languages: yes
           plugin_languages_limit: 8
 
-          plugin_achievements: yes
+          # Disable until lowlighter/metrics fixes `user.projects` (Projects classic sunset).
+          plugin_achievements: no
           plugin_achievements_display: compact

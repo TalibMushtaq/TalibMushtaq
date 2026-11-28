@@ -1,4 +1,4 @@
-## [2026-11-28] - Fix achievements and reduce metrics size
-**What changed:** `.github/workflows/metrics.yml` pins `ShawnXxy/metrics@1e49d0b8b932624dd7762147e35ccc137eda09f1` (PR #1834) to migrate achievements from sunset `user.projects` to `user.projectsV2`; `README.md` renders `github-metrics.svg` at natural width `480` instead of `100%`.
-**Why:** GitHub Projects classic is sunset, causing `Achievements` to render `Unexpected error`; `width="100%"` stretched the metrics image too large.
-**Impact:** Achievements should render; metrics image is smaller; no token or README section changes.
+## [2026-11-28] - Reduce metrics size; disable broken achievements
+**What changed:** `README.md` renders `github-metrics.svg` at natural width `480` instead of `100%`; `.github/workflows/metrics.yml` sets `plugin_achievements: no`.
+**Why:** `width="100%"` stretched the metrics image too large; `plugin_achievements: yes` currently renders `Unexpected error` because `lowlighter/metrics` queries sunset `user.projects` (Projects classic) instead of `user.projectsV2`. Pinning open PR #1834 failed while building the forked action image.
+**Impact:** Metrics workflow succeeds without the `Achievements` error box; metrics image is smaller; re-enable `plugin_achievements` once upstream fixes `user.projects`.
