@@ -16,7 +16,8 @@ jobs:
 
     steps:
       - name: Generate GitHub Metrics
-        uses: lowlighter/metrics@latest
+        # Pin PR #1834: migrate achievements to projectsV2; Projects classic is sunset.
+        uses: ShawnXxy/metrics@1e49d0b8b932624dd7762147e35ccc137eda09f1
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: github-metrics.svg

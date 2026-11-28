@@ -26,7 +26,7 @@
 
 <br>
 
-<img src="./github-metrics.svg" width="100%" alt="GitHub Metrics">
+<img src="./github-metrics.svg" width="480" alt="GitHub Metrics">
 
 </details>
 
